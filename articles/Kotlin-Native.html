@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kotlin Native</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Kotlin-null-safety-and-its-performance-considerations-part-1.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Kotlin-Night-in-San-Francisco-Recordings.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Aug 21, 2016</li><li><a href="./Scala-vs-Kotlin-inline-and-infix.html">Scala vs Kotlin: inline and infix</a></li>
+<li class="pure-menu-list-date">Aug 20, 2016</li><li><a href="./Decision-Trees-with-Kotlin.html">Decision Trees with Kotlin</a></li>
+<li><a href="./Kotlin-The-Good-The-Bad-and-The-Ugly.html">Kotlin: The Good, The Bad, and The Ugly</a></li>
+<li class="pure-menu-list-date">Aug 17, 2016</li><li><a href="./The-Next-Language-You-Thought-You-Didn’t-Need.html">The Next Language You Thought You Didn’t Need</a></li>
+<li class="pure-menu-list-date">Aug 10, 2016</li><li><a href="./PaperParcel-with-Kotlin.html">PaperParcel with Kotlin</a></li>
+<li><a href="./Issues-Faced-With-Kotlin-During-Android-Development.html">Issues Faced With Kotlin During Android Development</a></li>
+<li><a href="./Lessons-from-converting-an-app-to-100-Kotlin.html">Lessons from converting an app to 100% Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 05, 2016</li><li><a href="./Writing-Gradle-Build-Scripts-in-Kotlin.html">Writing Gradle Build Scripts in Kotlin</a></li>
+<li><a href="./More-readable-tests-with-Kotlin.html">More readable tests with Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 04, 2016</li><li><a href="./Calling-on-EAPers.html">Calling on EAPers</a></li>
+<li class="pure-menu-list-date">Aug 03, 2016</li><li><a href="./Better-Android-Development-with-Kotlin-and-Gradle.html">Better Android Development with Kotlin and Gradle</a></li>
+<li><a href="./Andrey-Breslav-Kotlin-Coroutines-JVMLS-2016.html">Andrey Breslav: Kotlin Coroutines, JVMLS 2016</a></li>
+<li class="pure-menu-list-date">Jul 28, 2016</li><li><a href="./KotlinLifeguard-1.html">KotlinLifeguard #1</a></li>
+<li class="pure-menu-list-date">Jul 27, 2016</li><li><a href="./UI-Testing-separating-Assertions-from-Actions-with-Kotlin-DSL.html">UI Testing: separating Assertions from Actions with Kotlin DSL</a></li>
+<li class="pure-menu-list-date">Jul 26, 2016</li><li><a href="./JUnit-5-with-Spring-Boot-plus-Kotlin.html">JUnit 5 with Spring Boot (plus Kotlin)</a></li>
+<li class="pure-menu-list-date">Jul 25, 2016</li><li><a href="./Things-We-ve-Learned-During-Coolcal-Development-in-Kotlin.html">Things We've Learned During Coolcal Development in Kotlin</a></li>
+<li class="pure-menu-list-date">Jul 24, 2016</li><li><a href="./Scala-vs-Kotlin-Operator-overloading.html">Scala vs Kotlin: Operator overloading</a></li>
+<li class="pure-menu-list-date">Jul 14, 2016</li><li><a href="./First-glimpse-of-Kotlin-1-1-Coroutines-Type-aliases-and-more.html">First glimpse of Kotlin 1.1: Coroutines, Type aliases and more</a></li>
+<li class="pure-menu-list-date">Jul 10, 2016</li><li><a href="./Scala-vs-Kotlin-Pimp-my-library.html">Scala vs Kotlin: Pimp my library</a></li>
+<li class="pure-menu-list-date">Jul 06, 2016</li><li><a href="./Never-say-final-mocking-Kotlin-classes-in-unit-tests.html">Never say final: mocking Kotlin classes in unit tests</a></li>
+<li class="pure-menu-list-date">Jul 03, 2016</li><li><a href="./Data-Driven-Testing-with-Spek.html">Data Driven Testing with Spek </a></li>
+<li class="pure-menu-list-date">Jun 30, 2016</li><li><a href="./Kotlin-1-0-3-Is-Here.html">Kotlin 1.0.3 Is Here!</a></li>
+<li class="pure-menu-list-date">Jun 25, 2016</li><li><a href="./How-to-get-IDEA-to-detect-kotlin-generated-sources-using-Gradle.html">How to get IDEA to detect kotlin generated sources using Gradle</a></li>
+<li class="pure-menu-list-date">Jun 20, 2016</li><li><a href="./Ad-hoc-polymorphism-in-Kotlin.html">Ad-hoc polymorphism in Kotlin</a></li>
+<li><a href="./Kotlin-null-safety-and-its-performance-considerations-part-1.html">Kotlin null safety and its performance considerations -- part 1</a></li>
+<li class="pure-menu-list-date">Jun 17, 2016</li><li><a href="./Kotlin-Native.html">Kotlin Native</a></li>
+<li class="pure-menu-list-date">Jun 14, 2016</li><li><a href="./Kotlin-Night-in-San-Francisco-Recordings.html">Kotlin Night in San Francisco Recordings</a></li>
+<li><a href="./News-from-KotlinTest.html">News from KotlinTest</a></li>
+<li class="pure-menu-list-date">Jun 13, 2016</li><li><a href="./Meet-the-Kotlin-Team-at-Gradle-Summit.html">Meet the Kotlin Team at Gradle Summit</a></li>
+<li class="pure-menu-list-date">Jun 09, 2016</li><li><a href="./Архитектор-Kotlin-Язык-программирования-—-рабочий-инструмент-Если-никогда-их-не-менять-можно-отстать-от-жизни-.html">Архитектор Kotlin: «Язык программирования — рабочий инструмент. Если никогда их не менять, можно отстать от жизни» </a></li>
+<li class="pure-menu-list-date">Jun 08, 2016</li><li><a href="./Kotlin-1-0-3-EAP.html">Kotlin 1.0.3 EAP</a></li>
+<li class="pure-menu-list-date">Jun 06, 2016</li><li><a href="./When-Kotlin-met-Gradle.html">When Kotlin met Gradle</a></li>
+<li class="pure-menu-list-date">Jun 03, 2016</li><li><a href="./Kotlin-Eclipse-Plugin-0-7-Is-Here.html">Kotlin Eclipse Plugin 0.7 Is Here!</a></li>
+<li class="pure-menu-list-date">Jun 02, 2016</li><li><a href="./What’s-in-store-for-Kotlin-this-year.html">What’s in store for Kotlin this year</a></li>
+<li class="pure-menu-list-date">Jun 01, 2016</li><li><a href="./Where-We-Stand-What-s-Next-for-Kotlin.html">Where We Stand & What's Next for Kotlin</a></li>
+<li class="pure-menu-list-date">May 30, 2016</li><li><a href="./Neural-Networks-in-Kotlin-part-2.html">Neural Networks in Kotlin (part 2)</a></li>
+<li class="pure-menu-list-date">May 27, 2016</li><li><a href="./Neural-Network-in-Kotlin.html">Neural Network in Kotlin</a></li>
+<li class="pure-menu-list-date">May 24, 2016</li><li><a href="./You-can-do-Better-with-Kotlin.html">You can do Better with Kotlin</a></li>
+<li class="pure-menu-list-date">May 20, 2016</li><li><a href="./Kotlin-dragging-java-into-the-modern-world.html">Kotlin, dragging java into the modern world</a></li>
+<li class="pure-menu-list-date">May 18, 2016</li><li><a href="./Gradle-Meets-Kotlin.html">Gradle Meets Kotlin</a></li>
+<li><a href="./Kotlin-Meets-Gradle.html">Kotlin Meets Gradle</a></li>
+<li class="pure-menu-list-date">May 17, 2016</li><li><a href="./Gradle-Elevates-the-Build-to-First-Class-Programming-With-Kotlin-Language.html">Gradle Elevates the Build to First-Class Programming With Kotlin Language</a></li>
+<li class="pure-menu-list-date">May 13, 2016</li><li><a href="./Kotlin-1-0-2-is-Here.html">Kotlin 1.0.2 is Here</a></li>
+<li class="pure-menu-list-date">May 12, 2016</li><li><a href="./Kosent.html">Kosent</a></li>
+<li class="pure-menu-list-date">May 10, 2016</li><li><a href="./Testing-in-Kotlin.html">Testing in Kotlin</a></li>
+<li class="pure-menu-list-date">May 01, 2016</li><li><a href="./JMock-and-Kotlin.html">JMock and Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 29, 2016</li><li><a href="./Exercises-in-Kotlin-Part-5-Classes.html">Exercises in Kotlin: Part 5 - Classes</a></li>
+<li class="pure-menu-list-date">Apr 27, 2016</li><li><a href="./Exercises-in-Kotlin-Part-4-Control-flows-and-return.html">Exercises in Kotlin: Part 4 - Control flows and return</a></li>
+<li class="pure-menu-list-date">Apr 24, 2016</li><li><a href="./Writing-Concise-Code-With-Kotlin.html">Writing Concise Code With Kotlin</a></li>
+<li><a href="./Type-safe-JavaFX-CSS-with-TornadoFX.html">Type safe JavaFX CSS with TornadoFX</a></li>
+<li class="pure-menu-list-date">Apr 21, 2016</li><li><a href="./JDK7-8-features-in-Kotlin-1-0.html">JDK7/8 features in Kotlin 1.0</a></li>
+<li><a href="./Kotlin-Android.html">Kotlin + Android</a></li>
+<li class="pure-menu-list-date">Apr 20, 2016</li><li><a href="./Kotlin-Android-First-Impressions.html">Kotlin + Android First Impressions</a></li>
+<li><a href="./Exercises-in-Kotlin-Part-3-Functions.html">Exercises in Kotlin: Part 3 - Functions</a></li>
+<li class="pure-menu-list-date">Apr 19, 2016</li><li><a href="./Exercises-in-Kotlin-Part-2-High-level-syntax-and-Variables.html">Exercises in Kotlin: Part 2 - High level syntax and Variables</a></li>
+<li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 07, 2016</li><li><a href="./Android-And-Kotlin.html">Android And Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li><a href="./RU-Дмитрий-Полищук-Kotlin-Android-практический-ликбез.html">(RU) Дмитрий Полищук - Kotlin + Android: практический ликбез</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 30, 2015</li><li><a href="./Early-Impressions-of-Kotlin.html">Early Impressions of Kotlin</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 26, 2015</li><li><a href="./Production-Ready-Kotlin.html">Production Ready Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://medium.com/@octskyward/kotlin-native-310ffac94af2#.3oep6gxpa">Kotlin Native</a> - <span class="main-title-date">Jun 17, 2016</span>
+      </h1>
+      <h2>by Mike Hearn</h2>
+      <h3>Kotlin Native</h3>
+<p>A frequent question about Kotlin is if/when it will support compilation to native binaries that run without a JVM. Usually this takes the form of a more technical question like, &ldquo;will the Kotlin compiler get an LLVM backend?&rdquo;</p>
+<p>I am not on the JetBrains team and I believe they&rsquo;ve already made up their minds to do this, but I don&rsquo;t personally think this feature would be the best way to solve the problems that are driving these questions.</p>
+<p>Luckily, there are better ways that can. Kotlin doesn&rsquo;t need an LLVM backend: the wider JVM community is producing all the needed puzzle pieces already. Someone just has to put them together.</p>
+<h3>Why do people want native binaries?</h3>
+<p>Here&rsquo;s an entirely unscientific summary of the top reasons why people so often request a native backend for managed languages, based on conversations I&rsquo;ve had over the years:</p>
+<ol>
+<li>They think the code would run faster or use less memory</li>
+<li>They want better startup time</li>
+<li>They think deploying programs that have only one file is simpler</li>
+<li>They want to avoid garbage collection</li>
+<li>They want to run on iOS, which forbids JIT compilers by policy</li>
+<li>They want better native-code interop</li>
+</ol>
+<p>This list covers two of the three reasons cited by <a href="http://www.scala-native.org/">the Scala Native website</a> for why it exists. The other reason is that Scala Native is extending the language to support C++ like constructs that are normally forbidden by the JVM, like forced stack allocation, but building a better C++ is already being handled by Rust. I suspect that trying to convert Scala or Kotlin into C++/Rust competitors wouldn&rsquo;t go well.</p>
+<p>Sometimes people think a &lsquo;native&rsquo; version of a managed language would fix problems that have nothing to do with compiler technology, like <a href="https://news.ycombinator.com/item?id=11226023">this guy</a> who believes it would change font rendering. I&rsquo;ve seen &lsquo;native&rsquo; become a mythical cure-all for any frustration or problem the user might have ... which isn&rsquo;t surprising, given that most people have no experience with managed-to-native technologies.</p>
+<h3>A &lsquo;Kotlin Native&rsquo; would make slower code</h3>
+<p>It is a common belief that code compiled by an ahead-of-time compiler must be faster or less memory hungry than just-in-time compiled code. I used to believe this too. It makes sense: C++ apps run fast, and C++ compilers are very slow. It stands to reason that the compilers are slow because they&rsquo;re spending a lot of time optimising the code they&rsquo;re producing. Surely, a compiler that can only grab a handful of spare cycles here and there whilst the app is running can never do such a good job?</p>
+<p>Unfortunately, performance is subtle and often unintuitive. C++ compilers are slow mostly due to the #include and generics model the language uses, not due to optimisations. And a team at Oracle is adding ahead of time compilation to HotSpot. They gave a tech talk about it last year called &ldquo;<a href="https://www.youtube.com/watch?v=Xybzyv8qbOc">Java goes AOT</a>&rdquo;. Plain old AOT seems to give around 10%&ndash;20% slower code, depending on the kind of app (in the talk this is the difference between tiered and non-tiered). The reason is that virtual machines that support deoptimization, as the JVM does, can make speculative optimisations that aren&rsquo;t always correct. Programs written in higher level languages benefit from this technique more, for instance Scala code benefits more than Java code does. The AOT compiler they&rsquo;re using (Graal) isn&rsquo;t weak or amateur: it&rsquo;s competitive with GCC when compiling C code. It&rsquo;s just that these advanced optimisations are really powerful.</p>
+<p>It&rsquo;s for this reason that the HotSpot AOT mode actually supports using a mix of AOT and JIT compiled code. The app can be compiled ahead of time so the interpreter isn&rsquo;t used, but in a way that self-profiles. Then the JIT compiler is still invoked at runtime to recompile the hot spots, winning back most of the performance loss. You get a much less severe warmup period, whilst still obtaining the best peak performance.</p>
+<p>Android has learned the same lesson. The replacement for Dalvik that was introduced in Marshmallow (ART) started out as a pure AOT compiler. In Android N, it will start using a mix of AOT and JIT compilation.</p>
+<p>Additionally, the shortest path to a Kotlin-specific native compiler backend would be LLVM. LLVM is primarily used to compile C and C++. Many optimisations that can really help high level managed languages like Kotlin simply don&rsquo;t apply to C++, so LLVM doesn&rsquo;t implement them at all. That&rsquo;d result in an even bigger speed hit.</p>
+<blockquote>
+<p><strong>Sidenote</strong>: the .NET virtual machine does not have an interpreter nor does it support speculative optimisations. It&rsquo;s really just a regular compiler that happens to run the first time a method is called. This is why Microsoft has tended to be more interested in AOT compilation than the Java space has been: they never exploited the potential of JIT compilation, so they have less to lose from abandoning it.</p>
+</blockquote>
+<p>What about other forms of bloat, like memory usage, binary size and startup time?</p>
+<p>Even those are complicated. Most of the memory usage of apps written in managed languages like Kotlin, Scala, Java, C# etc comes from their reliance on object identity, garbage collection, unicode strings and other things that native compilation doesn&rsquo;t affect.</p>
+<p>Worse, native CPU code is a lot larger than JVM bytecode. Larger code bloats downloads and uses more RAM, lowering cache utilisation. An AOT compiled &ldquo;Hello World&rdquo; Java app doesn&rsquo;t start any faster than the regular interpreted version because even though the interpreter runs far fewer instructions per second than the CPU can, each instruction does a lot more and takes much less space in memory. Runtime of a hello world app is only about 80 milliseconds anyway, which is a relevant cost only if you&rsquo;re making tiny tools for a UNIX shell.</p>
+<p>And whilst hauling around a couple of JIT compilers and three garbage collectors adds bloat, that&rsquo;s not inherent to using a virtual machine rather than compiling to native. It&rsquo;s just that HotSpot is a one-size-fits-all program that is designed to run on everything from laptops to giant servers. You can make much smaller virtual machines if you&rsquo;re willing to specialise.</p>
+<h3>Enter Avian</h3>
+<blockquote>
+<p>&ldquo;Avian is a lightweight virtual machine and class library designed to provide a useful subset of Java&rsquo;s features, suitable for building self-contained applications.&rdquo;</p>
+</blockquote>
+<p>So says <a href="https://readytalk.github.io/avian/">the website</a>. They aren&rsquo;t joking. The example app demos use of the native UI toolkit on Windows, MacOS X or Linux. It&rsquo;s not a trivial Hello World app at all, yet it&rsquo;s a standalone self-contained binary that clocks in at only one megabyte. In contrast, &ldquo;Hello World&rdquo; in Go generates a binary that is 1.1mb in size, despite doing much less.</p>
+<p>Avian can get these tiny sizes because it&rsquo;s fully focused on doing so: it implements optimisations and features the standard HotSpot JVM lacks, like the use of LZMA compression and ProGuard to strip the standard libraries. Yet it still provides a garbage collector and a JIT compiler.</p>
+<p>For people who want to use Kotlin to write small, self contained command line apps of the kind Go is sometimes used for, a much simpler and better solution than an LLVM backend would be to make a fully integrated Avian/Kotlin combination. Avian is hard to use right now&#x200A;&mdash;&#x200A;you&rsquo;re expected to be familiar with native-world tools like GCC and make. Making a one-click JetBrains style GUI would yield programs that <em>look</em> to the user like they were AOT compiled: they&rsquo;re single executables that only require the base OS. And using SWT you can build GUIs that look native on every platform because under the hood they <em>are</em> native. But you wouldn&rsquo;t need to abandon the benefits of JIT compilation or garbage collection.</p>
+<h3>Losing garbage collection</h3>
+<p>Sometimes the people requesting a native backend want it because they want to avoid GC, and associate &ldquo;native&rdquo; with &ldquo;not garbage collected&rdquo;. There is no connection between these things: you can have garbage collected C++ and you can do manual memory management in Java (and some high performance libraries do).</p>
+<p>The problem with extensively mixing techniques is that it forks the language. A library that assumes garbage collection cannot be used without a collector and likewise, a library that expects manual management becomes a lot harder to use from code that expects a GC. You&rsquo;d have to introduce smart pointers and other C++ like constructs to the language to make it really convenient.</p>
+<p>I wouldn&rsquo;t like to see Kotlin splinter into two different languages, Kotlin-GC and Kotlin-Manual. That would hurt the community and ecosystem for questionable benefits.</p>
+<p>And the benefits <em>are</em> questionable. Many devs who think they can&rsquo;t tolerate GC are basing their opinions on old/crappy GCs in mobile phones or (worse) web browsers. This impression is heightened by the fact that some well known garbage collected apps are written by people who just don&rsquo;t seem to care about performance at all, like Minecraft or Eclipse, leading people to blame GC for what is in reality just badly written code. But there are counterexamples that show it doesn&rsquo;t have to be this way: Unreal Engine is written in C++ and has used a core garbage collected game heap since version 3. It powers many of the worlds AAA titles. They can hit 60 frames per second and they are using a very basic GC. Tim Sweeney&rsquo;s secret is that he cares about performance and productivity simultaneously. If they can do it, so can you.</p>
+<h3>iOS and native code interop</h3>
+<p>The final reasons people want a native compiler backend are iOS support and to make native code interop easier.</p>
+<p>iOS is a good reason. That platform bans JIT compilers because it helps Apple enforce their incredibly rigid policies. But doing a native backend at the language level is the wrong approach. RoboVM is a project that built a JVM bytecode to ARM AOT compiler, and although RoboVM is now a dead project due to being acquired by Microsoft, old versions of its code are still available under an open source license. It works for any JVM language and doesn&rsquo;t really suffer from this generality: a Scala or Kotlin specific ARM compiler wouldn&rsquo;t do much different.</p>
+<p>But that&rsquo;s probably not the long term direction the JVM platform will go in for iOS. As HotSpot itself is getting support for AOT compilation, and HotSpot has an ARM backend too, and there&rsquo;s an official OpenJDK mobile project that&rsquo;s already made an iOS (interpreter only) mobile version, it would make sense for them to plug these things together and end up with a mode in which HotSpot can generate AOT iOS binaries too. I wouldn&rsquo;t be surprised to see something like this announced between Java 9 and 10.</p>
+<p>The final reason is native code interop. If you compile to native, so the reasoning goes, it&rsquo;ll be easier to use C/C++ libraries like the ones your operating system provides.</p>
+<p>But the existence of projects like JNA seem to disprove this&#x200A;&mdash;&#x200A;you can have convenient interop without generating native code yourself. And there are some exciting techniques for working with native libraries coming up:</p>
+<ul>
+<li>The OpenJDK Panama project is adding support for things like inline assembly, pointers and struct layouts directly to Java and HotSpot. Yes, if you check out the Panama branch of the hotspot repository you can actually define assembly snippets in Java and they&rsquo;ll be inlined directly into usage sites, just like an <strong>asm</strong> block in C would. Panama also provides a clang-based tool that parses C/C++ headers and auto generates the equivalent Java declarations. All this should be automatically available to Kotlin and Scala users too.</li>
+<li>The Graal/Truffle research projects are creating <a href="http://github.com/graalvm/sulong/">Sulong</a>, which is a way to JIT compile LLVM bitcode on top of the JVM. There is a simple C API that exists when code is run on top of Sulong that allows for near zero-overhead interop with managed code.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Kotlin doesn&rsquo;t need an LLVM backend, and by extension I believe neither does Scala. Creating such a thing would be a huge and ongoing drain of manpower, take a long time, and end up duplicating work already being done elsewhere in the JVM ecosystem ... very likely with worse results.</p>
+<p>Instead, I think the right direction for the community to go is:</p>
+<ol>
+<li>Building a simple IntelliJ plugin that uses Avian to spit out tiny, self contained binaries, for when weight is more important than features. This would present some strong competition to Go in the command line tools space.</li>
+<li>Using the AOT mode being added to HotSpot to eliminate warmup times and (hopefully) support iOS, for times when AOT compilation really is the only solution.</li>
+<li>Waiting for JVM upgrades to reduce memory usage, support better native interop and so on. Don&rsquo;t try to duplicate these efforts at the language level.</li>
+<li>Educating the developer community about how to write high performance garbage collected apps <em>outside</em> of the server context.</li>
+</ol>
+<p>This approach isn&rsquo;t flawless: the AOT mode being added to HotSpot is planned to be a commercial feature, and big upgrades like Panama are long term projects. But adding an LLVM backend to the Kotlin or Scala compilers would be a long term project too, it&rsquo;d mean sacrificing other features that might be more useful, and it would likely never close the performance gap.</p>
+<p>As always in engineering, there are no solutions&#x200A;&mdash;&#x200A;only trade offs. I&rsquo;d rather have more features in the core Kotlin language/tooling than a native backend, and let other teams tackle the varying challenges involved.</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

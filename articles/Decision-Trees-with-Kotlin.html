@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decision Trees with Kotlin</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Scala-vs-Kotlin-inline-and-infix.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Kotlin-The-Good-The-Bad-and-The-Ugly.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Aug 21, 2016</li><li><a href="./Scala-vs-Kotlin-inline-and-infix.html">Scala vs Kotlin: inline and infix</a></li>
+<li class="pure-menu-list-date">Aug 20, 2016</li><li><a href="./Decision-Trees-with-Kotlin.html">Decision Trees with Kotlin</a></li>
+<li><a href="./Kotlin-The-Good-The-Bad-and-The-Ugly.html">Kotlin: The Good, The Bad, and The Ugly</a></li>
+<li class="pure-menu-list-date">Aug 17, 2016</li><li><a href="./The-Next-Language-You-Thought-You-Didn’t-Need.html">The Next Language You Thought You Didn’t Need</a></li>
+<li class="pure-menu-list-date">Aug 10, 2016</li><li><a href="./PaperParcel-with-Kotlin.html">PaperParcel with Kotlin</a></li>
+<li><a href="./Issues-Faced-With-Kotlin-During-Android-Development.html">Issues Faced With Kotlin During Android Development</a></li>
+<li><a href="./Lessons-from-converting-an-app-to-100-Kotlin.html">Lessons from converting an app to 100% Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 05, 2016</li><li><a href="./Writing-Gradle-Build-Scripts-in-Kotlin.html">Writing Gradle Build Scripts in Kotlin</a></li>
+<li><a href="./More-readable-tests-with-Kotlin.html">More readable tests with Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 04, 2016</li><li><a href="./Calling-on-EAPers.html">Calling on EAPers</a></li>
+<li class="pure-menu-list-date">Aug 03, 2016</li><li><a href="./Better-Android-Development-with-Kotlin-and-Gradle.html">Better Android Development with Kotlin and Gradle</a></li>
+<li><a href="./Andrey-Breslav-Kotlin-Coroutines-JVMLS-2016.html">Andrey Breslav: Kotlin Coroutines, JVMLS 2016</a></li>
+<li class="pure-menu-list-date">Jul 28, 2016</li><li><a href="./KotlinLifeguard-1.html">KotlinLifeguard #1</a></li>
+<li class="pure-menu-list-date">Jul 27, 2016</li><li><a href="./UI-Testing-separating-Assertions-from-Actions-with-Kotlin-DSL.html">UI Testing: separating Assertions from Actions with Kotlin DSL</a></li>
+<li class="pure-menu-list-date">Jul 26, 2016</li><li><a href="./JUnit-5-with-Spring-Boot-plus-Kotlin.html">JUnit 5 with Spring Boot (plus Kotlin)</a></li>
+<li class="pure-menu-list-date">Jul 25, 2016</li><li><a href="./Things-We-ve-Learned-During-Coolcal-Development-in-Kotlin.html">Things We've Learned During Coolcal Development in Kotlin</a></li>
+<li class="pure-menu-list-date">Jul 24, 2016</li><li><a href="./Scala-vs-Kotlin-Operator-overloading.html">Scala vs Kotlin: Operator overloading</a></li>
+<li class="pure-menu-list-date">Jul 14, 2016</li><li><a href="./First-glimpse-of-Kotlin-1-1-Coroutines-Type-aliases-and-more.html">First glimpse of Kotlin 1.1: Coroutines, Type aliases and more</a></li>
+<li class="pure-menu-list-date">Jul 10, 2016</li><li><a href="./Scala-vs-Kotlin-Pimp-my-library.html">Scala vs Kotlin: Pimp my library</a></li>
+<li class="pure-menu-list-date">Jul 06, 2016</li><li><a href="./Never-say-final-mocking-Kotlin-classes-in-unit-tests.html">Never say final: mocking Kotlin classes in unit tests</a></li>
+<li class="pure-menu-list-date">Jul 03, 2016</li><li><a href="./Data-Driven-Testing-with-Spek.html">Data Driven Testing with Spek </a></li>
+<li class="pure-menu-list-date">Jun 30, 2016</li><li><a href="./Kotlin-1-0-3-Is-Here.html">Kotlin 1.0.3 Is Here!</a></li>
+<li class="pure-menu-list-date">Jun 25, 2016</li><li><a href="./How-to-get-IDEA-to-detect-kotlin-generated-sources-using-Gradle.html">How to get IDEA to detect kotlin generated sources using Gradle</a></li>
+<li class="pure-menu-list-date">Jun 20, 2016</li><li><a href="./Ad-hoc-polymorphism-in-Kotlin.html">Ad-hoc polymorphism in Kotlin</a></li>
+<li><a href="./Kotlin-null-safety-and-its-performance-considerations-part-1.html">Kotlin null safety and its performance considerations -- part 1</a></li>
+<li class="pure-menu-list-date">Jun 17, 2016</li><li><a href="./Kotlin-Native.html">Kotlin Native</a></li>
+<li class="pure-menu-list-date">Jun 14, 2016</li><li><a href="./Kotlin-Night-in-San-Francisco-Recordings.html">Kotlin Night in San Francisco Recordings</a></li>
+<li><a href="./News-from-KotlinTest.html">News from KotlinTest</a></li>
+<li class="pure-menu-list-date">Jun 13, 2016</li><li><a href="./Meet-the-Kotlin-Team-at-Gradle-Summit.html">Meet the Kotlin Team at Gradle Summit</a></li>
+<li class="pure-menu-list-date">Jun 09, 2016</li><li><a href="./Архитектор-Kotlin-Язык-программирования-—-рабочий-инструмент-Если-никогда-их-не-менять-можно-отстать-от-жизни-.html">Архитектор Kotlin: «Язык программирования — рабочий инструмент. Если никогда их не менять, можно отстать от жизни» </a></li>
+<li class="pure-menu-list-date">Jun 08, 2016</li><li><a href="./Kotlin-1-0-3-EAP.html">Kotlin 1.0.3 EAP</a></li>
+<li class="pure-menu-list-date">Jun 06, 2016</li><li><a href="./When-Kotlin-met-Gradle.html">When Kotlin met Gradle</a></li>
+<li class="pure-menu-list-date">Jun 03, 2016</li><li><a href="./Kotlin-Eclipse-Plugin-0-7-Is-Here.html">Kotlin Eclipse Plugin 0.7 Is Here!</a></li>
+<li class="pure-menu-list-date">Jun 02, 2016</li><li><a href="./What’s-in-store-for-Kotlin-this-year.html">What’s in store for Kotlin this year</a></li>
+<li class="pure-menu-list-date">Jun 01, 2016</li><li><a href="./Where-We-Stand-What-s-Next-for-Kotlin.html">Where We Stand & What's Next for Kotlin</a></li>
+<li class="pure-menu-list-date">May 30, 2016</li><li><a href="./Neural-Networks-in-Kotlin-part-2.html">Neural Networks in Kotlin (part 2)</a></li>
+<li class="pure-menu-list-date">May 27, 2016</li><li><a href="./Neural-Network-in-Kotlin.html">Neural Network in Kotlin</a></li>
+<li class="pure-menu-list-date">May 24, 2016</li><li><a href="./You-can-do-Better-with-Kotlin.html">You can do Better with Kotlin</a></li>
+<li class="pure-menu-list-date">May 20, 2016</li><li><a href="./Kotlin-dragging-java-into-the-modern-world.html">Kotlin, dragging java into the modern world</a></li>
+<li class="pure-menu-list-date">May 18, 2016</li><li><a href="./Gradle-Meets-Kotlin.html">Gradle Meets Kotlin</a></li>
+<li><a href="./Kotlin-Meets-Gradle.html">Kotlin Meets Gradle</a></li>
+<li class="pure-menu-list-date">May 17, 2016</li><li><a href="./Gradle-Elevates-the-Build-to-First-Class-Programming-With-Kotlin-Language.html">Gradle Elevates the Build to First-Class Programming With Kotlin Language</a></li>
+<li class="pure-menu-list-date">May 13, 2016</li><li><a href="./Kotlin-1-0-2-is-Here.html">Kotlin 1.0.2 is Here</a></li>
+<li class="pure-menu-list-date">May 12, 2016</li><li><a href="./Kosent.html">Kosent</a></li>
+<li class="pure-menu-list-date">May 10, 2016</li><li><a href="./Testing-in-Kotlin.html">Testing in Kotlin</a></li>
+<li class="pure-menu-list-date">May 01, 2016</li><li><a href="./JMock-and-Kotlin.html">JMock and Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 29, 2016</li><li><a href="./Exercises-in-Kotlin-Part-5-Classes.html">Exercises in Kotlin: Part 5 - Classes</a></li>
+<li class="pure-menu-list-date">Apr 27, 2016</li><li><a href="./Exercises-in-Kotlin-Part-4-Control-flows-and-return.html">Exercises in Kotlin: Part 4 - Control flows and return</a></li>
+<li class="pure-menu-list-date">Apr 24, 2016</li><li><a href="./Writing-Concise-Code-With-Kotlin.html">Writing Concise Code With Kotlin</a></li>
+<li><a href="./Type-safe-JavaFX-CSS-with-TornadoFX.html">Type safe JavaFX CSS with TornadoFX</a></li>
+<li class="pure-menu-list-date">Apr 21, 2016</li><li><a href="./JDK7-8-features-in-Kotlin-1-0.html">JDK7/8 features in Kotlin 1.0</a></li>
+<li><a href="./Kotlin-Android.html">Kotlin + Android</a></li>
+<li class="pure-menu-list-date">Apr 20, 2016</li><li><a href="./Kotlin-Android-First-Impressions.html">Kotlin + Android First Impressions</a></li>
+<li><a href="./Exercises-in-Kotlin-Part-3-Functions.html">Exercises in Kotlin: Part 3 - Functions</a></li>
+<li class="pure-menu-list-date">Apr 19, 2016</li><li><a href="./Exercises-in-Kotlin-Part-2-High-level-syntax-and-Variables.html">Exercises in Kotlin: Part 2 - High level syntax and Variables</a></li>
+<li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 07, 2016</li><li><a href="./Android-And-Kotlin.html">Android And Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li><a href="./RU-Дмитрий-Полищук-Kotlin-Android-практический-ликбез.html">(RU) Дмитрий Полищук - Kotlin + Android: практический ликбез</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 30, 2015</li><li><a href="./Early-Impressions-of-Kotlin.html">Early Impressions of Kotlin</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 26, 2015</li><li><a href="./Production-Ready-Kotlin.html">Production Ready Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://cloudmark.github.io/Decision-Trees/">Decision Trees with Kotlin</a> - <span class="main-title-date">Aug 20, 2016</span>
+      </h1>
+      <h2>by Mark Galea</h2>
+      <p>It has been quite a while since my last post; things have been pretty busy in preparation for the launch of our new product <a href="https://www.voodoodreams.com">VoodooDreams</a>. Now that we have shipped our baby, I am super eager to try out <a href="https://www.kotlin.com">Kotlin</a> - a new programming language from JetBrains targeting the JVM.  One interesting aspect about Kotlin (similar to Scala and other JVM-based languages) is that it treats functions as first class citizens (<em>IMO Functional Interfaces just patch the gap</em>).  In order to try out this language we will create a Decision Tree Learning algorithm which is one of the most used and practical methods for learning inductive inference.</p>
+<h1>Learning as a Task</h1>
+<p>In order to ground our discussion, we will consider the example of learning the concept &quot;Play Tennis&quot;. <em>Note that this example has been adapted from the book - <a href="https://www.amazon.de/Machine-Learning-McGraw-Hill-Computer-Science/dp/0070428077/ref=sr_1_1?ie=UTF8&amp;qid=1471686003&amp;sr=8-1&amp;keywords=machine+Learning+Tom+Mitchell">Machine Learning by Tom Mitchell</a></em>.  The table below represents a list of positive and negative examples which we will use to induce a general function. This will be our training DataSet \(D\).</p>
+<table>
+<thead>
+<tr>
+<th>Outlook</th>
+<th>Temperature</th>
+<th>Humidity</th>
+<th>Wind</th>
+<th>Play Tennis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Weak</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Strong</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Overcast</td>
+<td>Hot</td>
+<td>High</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Overcast</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Overcast</td>
+<td>Mild</td>
+<td>High</td>
+<td>Strong</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Overcast</td>
+<td>Hot</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>Mild</td>
+<td>High</td>
+<td>Strong</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>The task here is to learn the <em>Play Tennis</em> concept from the attributes: Outlook, Temperature, Humidity and Wind.  Each row in the table represents a hypothesis. We will represent this in Kotlin using the <code>DataPoint</code> class and use the <a href="http://kotlinlang.org/docs/reference/delegated-properties.html">Delegated Properties</a> <strong>map</strong> feature.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataPoint</span></span>(<span class="hljs-keyword">val</span> map: Map&lt;String, Any?&gt;, <span class="hljs-keyword">val</span> result: <span class="hljs-built_in">Boolean</span>? = <span class="hljs-literal">null</span>){
+    <span class="hljs-keyword">val</span> outlook:String <span class="hljs-keyword">by</span> map
+    <span class="hljs-keyword">val</span> temperature: String <span class="hljs-keyword">by</span> map
+    <span class="hljs-keyword">val</span> humidity: String <span class="hljs-keyword">by</span> map
+    <span class="hljs-keyword">val</span> wind: String <span class="hljs-keyword">by</span> map
+}</code></pre>
+<p>The <strong>Delegated Property map</strong> feature (<code>by map</code>) allows us to store properties in a map whilst still allowing accessing them as properties.  In the ID3 algorithm we will be using the map to train the algorithm whilst an end user can use the properties directly. Our training DataSet \(D\) can be represented as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> D = listOf(
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Sunny"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Hot"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to  <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">false</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Sunny"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Hot"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Strong"</span>), <span class="hljs-literal">false</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Overcast"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Hot"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Rain"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Mild"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Rain"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Cool"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Rain"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Cool"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Strong"</span>), <span class="hljs-literal">false</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Overcast"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Cool"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Strong"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Sunny"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Mild"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">false</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Sunny"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Cool"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Rain"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Mild"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Sunny"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Mild"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Strong"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Overcast"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Mild"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Strong"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Overcast"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Hot"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"Normal"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Weak"</span>), <span class="hljs-literal">true</span>),
+   DataPoint(mapOf(<span class="hljs-string">"outlook"</span> to <span class="hljs-string">"Rain"</span>, <span class="hljs-string">"temperature"</span> to <span class="hljs-string">"Mild"</span>, <span class="hljs-string">"humidity"</span> to <span class="hljs-string">"High"</span>, <span class="hljs-string">"wind"</span> to <span class="hljs-string">"Strong"</span>), <span class="hljs-literal">false</span>)
+)</code></pre>
+<h1>Decision Trees Representation</h1>
+<p>Having represented our DataSet we will now focus on how to represent the Decision Tree built by using the ID3 algorithm.  This algorithm is but one in the family of Decision Tree Learning Algorithms; a family of algorithms which are great at approximating discrete-valued target functions.  The output of the ID3 algorithm is a decision tree which can be represented visually as follows:
+
+<img src="https://cloudmark.github.io/images/kotlin/ID3.png" alt=""></p>
+<p>In order to classify (predict) a new instance, we will start off at the root of the tree, test the attribute specified and then move down the tree branch corresponding to the value of the attribute.  This process is repeated until a leaf node is reached.</p>
+<p>Let us follow with the example:</p>
+<blockquote>
+<p><strong>Outlook</strong> = Sunny, <strong>Temperature</strong> = Hot, <strong>Humidity</strong> = High, <strong>Wind</strong> = Strong</p>
+</blockquote>
+<p>We will start off at the root of the tree which contains the attribute <strong>Outlook</strong> and move to the left subtree (since the value is <em>Sunny</em>).  The remaining attributes which could be tested are:</p>
+<blockquote>
+<p><strong>Temperature</strong> = Hot, <strong>Humidity</strong> = High, <strong>Wind</strong> = Strong</p>
+</blockquote>
+<p>The root of the left subtree requires us to check the <strong>Humidity</strong> attribute.  Since the value of the attribute is <em>High</em> we will move to the left subtree to find the leaf node containing the result <strong>No</strong>. Hence we can infer that this is not a good day to play tennis (but a great time to read this article! :bowtie:).</p>
+<p>In order to represent the following Tree in Kotlin we will make use of the <a href="https://kotlinlang.org/docs/reference/classes.html">Sealed Classes</a>.  From their documentation:</p>
+<blockquote>
+<p>Sealed classes are used for representing restricted class hierarchies, when a value can have one of the types from a limited set, but cannot have any other type. They are, in a sense, an extension of enum classes: the set of values for an enum type is also restricted, but each enum constant exists only as a single instance, whereas a subclass of a sealed class can have multiple instances which can contain state.</p>
+</blockquote>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tree</span> </span>{
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>(<span class="hljs-keyword">val</span> key: String, <span class="hljs-keyword">val</span> children: Map&lt;String, Tree&gt;?) : Tree()
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leaf</span></span>(<span class="hljs-keyword">val</span> result: <span class="hljs-built_in">Boolean</span>) : Tree()
+}</code></pre>
+<p>The tree above would be represented as follows:</p>
+<pre><code class="hljs language-kotlin"> Tree.Node(<span class="hljs-string">"Outlook"</span>, mapOf(
+         Pair(<span class="hljs-string">"Sunny"</span>, Tree.Node(<span class="hljs-string">"Humidity"</span>, mapOf(
+                 Pair(<span class="hljs-string">"High"</span>, Tree.Leaf(<span class="hljs-literal">false</span>)),
+                 Pair(<span class="hljs-string">"Normal"</span>, Tree.Leaf(<span class="hljs-literal">true</span>))
+         ))),
+         Pair(<span class="hljs-string">"Overcast"</span>, Tree.Leaf(<span class="hljs-literal">true</span>)),
+         Pair(<span class="hljs-string">"Rain"</span>, Tree.Node(<span class="hljs-string">"Wind"</span>, mapOf(
+                 Pair(<span class="hljs-string">"Strong"</span>, Tree.Leaf(<span class="hljs-literal">false</span>)),
+                 Pair(<span class="hljs-string">"Weak"</span>, Tree.Leaf(<span class="hljs-literal">true</span>))
+
+         )))
+ ))</code></pre>
+<p>Note that we could have also represented this as a disjunction of conjunctions.  If you are interested you can try it out - depth traversal algorithm comes to mind).</p>
+<p>$$
+\begin{eqnarray}
+(Outlook = Sunny \wedge Humidity = Normal) \vee \nonumber \newline
+(Outlook = Overcast) \vee \nonumber \newline
+(Outlook = Rain \wedge Wind = Weak)
+\end{eqnarray}
+$$</p>
+<h1>Classifying New Exemplars.</h1>
+<p>The advantage of using a sealed class is that it will make the implementation of the <code>classify</code> function more succinct.  When paired with the <a href="https://kotlinlang.org/docs/reference/control-flow.html#when-expression">When Expression</a> feature, sealed classes give us rudimentary pattern matching capabilities .  <em>It would be great to see proper pattern matching support in the coming Kotlin releases.</em>  The implementation of the <code>classify</code> function is as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ID3</span></span>() {
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span> {
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">classify</span><span class="hljs-params">(dataPoint: <span class="hljs-type">DataPoint</span>, tree: <span class="hljs-type">Tree</span>)</span></span>: <span class="hljs-built_in">Boolean</span> = <span class="hljs-keyword">when</span> (tree) {
+            <span class="hljs-keyword">is</span> Tree.Leaf -&gt; tree.result
+            <span class="hljs-keyword">is</span> Tree.Node -&gt; {
+                <span class="hljs-keyword">val</span> value = dataPoint.map[tree.key]
+                <span class="hljs-keyword">val</span> subtree = tree.children?.<span class="hljs-keyword">get</span>(value)!!
+                classify(dataPoint, subtree)
+            }
+        }
+    }
+}</code></pre>
+<p>Note that we are using the <a href="https://kotlinlang.org/docs/reference/object-declarations.html">Companion Object</a> feature of Kotlin.  If you have never seen Companion objects before you can think of them as <code>public static</code> methods on the ID3 class. Another feature which we are using is the <a href="https://kotlinlang.org/docs/reference/typecasts.html">Smart Cast</a> feature.  This feature will automatically type cast a variable after using the <code>is</code> checks.  In this case after the <code>is Tree.Leaf</code> expression evaluates to true, tree will automatically be cast to <code>Tree.Leaf</code>.</p>
+<h1>Building the Tree</h1>
+<p>Now that we have represented our decision tree and learnt how to classify new exemplars, let us take on the task of building a tree from the example data.  The most important question to ask when building a decision tree is &quot;Which Attribute Is the Best Classifier?&quot;. What we would like to determine is which attribute is the best attribute to classify items at a certain level in the tree, or better, which item gives us the best <em>information gain</em>.</p>
+<h2>Entropy</h2>
+<p>In order to determine information gain we start off by looking at entropy which measures the (im)purity of an arbitrary collection of examples.  Given a collection of elements \(S\) containing only positive and negative items, entropy is measured by:</p>
+<p>\[
+Entropy(S) = -p<em>{\oplus} log</em>{2} p<em>{\oplus} - p</em>{\ominus} log<em>{2}p</em>{\ominus}
+\]</p>
+<p>An intuitive way in which we can think about entropy is a number (\([0,1]\)) which represents the minimum number of bits of information needed to encode the classification of an arbitrary member of \(S\).  If the collection \(S\) does not have any positive or negative examples the entropy will be 0.  If I pick an item at random from the collection \(S\) and all items are from the same class then the item I picked must be from that class hence we need 0 bits to encode this information. If the distribution of samples is equal, then the entropy is 1.  This means that we need at minimum 1 bit to represent a randomly picked item from \(S\).  We could encode a positive sample as 1 and a negative sample as 0.  As an example, if we have 9 positive examples and 5 negative examples the entropy would be:</p>
+<p>$$
+Entropy([9+, 5-]) = -\frac{9}{14}log<em>{2}\Big(\frac{9}{14}\Big) -\frac{5}{14}log</em>{2}\Big(\frac{5}{14}\Big) = 0.940
+$$</p>
+<p>We can extend this formula of Entropy to multiple attributes (rather than just <em>true</em> and <em>false</em>) as follows:</p>
+<p>$$
+Entropy(S) = \sum<em>{i=1}^{c} -p</em>{i}log<em>{2}p</em>{i}
+$$</p>
+<p>where \(p_{i}\) is the proportion of \(S\) belonging to class \(i\).</p>
+<p>In Kotlin we can express <code>entropy</code> as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">entropy</span><span class="hljs-params">(positive: <span class="hljs-type">Double</span>, negative: <span class="hljs-type">Double</span>, total: <span class="hljs-type">Double</span> = positive + negative)</span></span>:<span class="hljs-built_in">Double</span> {
+  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">log2</span><span class="hljs-params">(valueA: <span class="hljs-type">Double</span>, valueB: <span class="hljs-type">Double</span>)</span></span> = <span class="hljs-keyword">if</span> (valueA == <span class="hljs-number">0.0</span>) <span class="hljs-number">1.0</span> <span class="hljs-keyword">else</span> Math.log(valueA / (valueA + valueB)) / Math.log(<span class="hljs-number">2.0</span>)
+  <span class="hljs-keyword">return</span> -(positive / total * log2(positive, negative) + negative / total * log2(negative, positive))
+}</code></pre>
+<h1>Information Gain</h1>
+<p>Now that we have defined Entropy as an (im)purity measure, we can answer the question &quot;Which Attribute Is The Best Classifier?&quot;.  This measure is called <em>Information Gain</em> - you can think of this value as the expected reduction in entropy or the expected number of bits saved if we had to encode the classification using the particular attribute.  The Information Gain of an attribute \(A\) is defined as:</p>
+<p>$$
+Gain(S, A) = Entropy(S) - \sum<em>{v \in Values(A)} \frac{|S</em>{v}|}{|S|}Entropy(S_{v})
+$$</p>
+<p>To understand what we need to do, lets work out the <em>Information Gain</em> of attribute \(Wind\) for the dataset \(S\) i.e. \(Gain(S, Wind)\).  <em>Note that there are 14 examples in our dataset;  9 positive, 5 negative \([9+ 5-]\).  There are 2 values for the attribute Wind: Weak and Strong.  Weak has 6 positive examples and 2 negative examples \([6+, 2-]\).  Strong has 3 positive examples and 3 negative examples \([3+, 3-]\)</em>.</p>
+<p>$$\begin{eqnarray}
+Gain(S, A) &amp;=&amp;  Entropy(S) - \sum<em>{v \in \{Weak, Strong\} } \frac{|S</em>{v}|}{|S|}Entropy(S<em>{v}) \nonumber \newline
+&amp;=&amp; Entropy(S) - \frac{8}{14}Entropy(S</em>{Weak}) - \frac{6}{14}Entropy(S_{Strong}) \nonumber \newline
+&amp;=&amp; 0.940 - \frac{8}{14}0.811 - \frac{6}{14}1.0 \nonumber \newline
+&amp;=&amp; 0.048
+\end{eqnarray}$$</p>
+<p>In Kotlin the Gain can be implemented as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">gain</span><span class="hljs-params">(dataPoints: <span class="hljs-type">List</span>&lt;<span class="hljs-type">DataPoint</span>&gt;, extractor: (<span class="hljs-type">DataPoint</span>)</span></span> -&gt; Pair&lt;String, <span class="hljs-built_in">Boolean</span>&gt;): <span class="hljs-built_in">Double</span> {
+    <span class="hljs-keyword">val</span> (positive, negative) = dataPoints.map { extractor(it) }.partition { it.second }
+    <span class="hljs-keyword">val</span> attributes = dataPoints.map { extractor(it) }
+        .groupBy { it.first }
+        .map {
+            <span class="hljs-keyword">val</span> (positiveSv, negativeSv) = it.value.partition { it.second }
+            Triple(it.key, positiveSv.size.toDouble(), negativeSv.size.toDouble())
+        }
+    <span class="hljs-keyword">return</span> (entropy(positive.size.toDouble(), negative.size.toDouble())
+            + attributes.map({ -entropy(it.second, it.third, dataPoints.size.toDouble()) }).sum())
+
+}</code></pre>
+<p>We can compute the Gain of the attribute Wind as follows:</p>
+<pre><code class="hljs language-kotlin">gain(dataPoints, { Pair(it.wind, it.result!!) })</code></pre>
+<p>The <code>extractor</code> function defined as</p>
+<pre><code class="hljs language-kotlin">extractor: (DataPoint) -&gt; Pair&lt;String, <span class="hljs-built_in">Boolean</span>&gt;</code></pre>
+<p>is a function which will be called on the dataset \(S\) to extract the information required - the value of the wind property and the classification result.  The <code>!!</code> is an indication to Kotlin that we are 100% sure that this property will not be null.</p>
+<h1>ID3 Tree</h1>
+<p>Now that we have all the pieces of our puzzle ready, we will write the <code>build</code> function which will create the ID3 Tree. To understand what is going on, I will use a literate programming approach.  Below you will find the listing of the build <code>function</code>.</p>
+<pre><code class="hljs language-kotlin"> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">build</span><span class="hljs-params">(dataPoints: <span class="hljs-type">List</span>&lt;<span class="hljs-type">DataPoint</span>&gt;)</span></span>: Tree {
+    <span class="hljs-keyword">val</span> (positive, negative) = dataPoints.partition { it.result!! }
+    <span class="hljs-keyword">if</span> (positive.size == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> Tree.Leaf(<span class="hljs-literal">false</span>)
+    <span class="hljs-keyword">if</span> (negative.size == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> Tree.Leaf(<span class="hljs-literal">true</span>)
+    <span class="hljs-keyword">val</span> attributes = dataPoints.map { it.map.keys }.flatMap { it }.distinct()
+    <span class="hljs-keyword">if</span> (attributes.size == <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">if</span> (dataPoints.count { it.result!! } &gt; dataPoints.count { !it.result!! }) Tree.Leaf(<span class="hljs-literal">true</span>) <span class="hljs-keyword">else</span> Tree.Leaf(<span class="hljs-literal">false</span>)
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">val</span> (attribute) = attributes.map { attr -&gt;
+            Pair(attr,
+                gain(dataPoints, { Pair(it.map[attr].toString(), it.result!!) })
+            )
+        }.sortedByDescending { it.second }.first()
+    
+        <span class="hljs-keyword">val</span> remaining = dataPoints.groupBy { it.map[attribute] }
+        <span class="hljs-keyword">val</span> filteredRemaining = remaining.entries.map {
+            entry -&gt;
+            Pair(entry.key, entry.value.map { dataPoint -&gt;
+                DataPoint(dataPoint.map.filterKeys { it != attribute }, dataPoint.result)
+            })
+        }
+    
+        <span class="hljs-keyword">val</span> children = filteredRemaining.map { Pair(it.first.toString(), build(it.second)) }.toMap();
+        <span class="hljs-keyword">return</span> Tree.Node(attribute, children)
+    }
+}</code></pre>
+<p>Some explanations are due.</p>
+<p>Starting off, we determine whether the DataSet is made up of all positive or all negative sample points (Entropy 0):</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> (positive, negative) = dataPoints.partition { it.result!! }
+<span class="hljs-keyword">if</span> (positive.size == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> Tree.Leaf(<span class="hljs-literal">false</span>)
+<span class="hljs-keyword">if</span> (negative.size == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> Tree.Leaf(<span class="hljs-literal">true</span>)</code></pre>
+<p>It such a case we return a <code>Tree.Leaf</code> with the corresponding result.<br>
+Next we will check how many attributes there are in the DataSet:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> attributes = dataPoints.map { it.map.keys }.flatMap { it }.distinct()</code></pre>
+<p>If there is only one attribute, then the most common value of the target attribute is returned.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">if</span> (attributes.size == <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">if</span> (dataPoints.count { it.result!! } &gt; dataPoints.count { !it.result!! }) 
+        Tree.Leaf(<span class="hljs-literal">true</span>) <span class="hljs-keyword">else</span> Tree.Leaf(<span class="hljs-literal">false</span>)
+}</code></pre>
+<p>Otherwise, we will first determine &quot;Which attribute is the best?&quot; by working the Information Gain of each attribute and retrieve the one with the highest Information Gain:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> (attribute) = attributes.map { attr -&gt;
+    Pair(attr,
+        gain(dataPoints, { Pair(it.map[attr].toString(), it.result!!) })
+    )
+}.sortedByDescending { it.second }.first()</code></pre>
+<p>For all the values of the chosen attribute:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> remaining = dataPoints.groupBy { it.map[attribute] }</code></pre>
+<p>we will add a new subtree below the parent node and select the DataSet subset such that the attribute \(A\) in the parent subset matches the value \(v_{i}\).</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> filteredRemaining = remaining.entries.map {
+    entry -&gt;
+    Pair(entry.key, entry.value.map { dataPoint -&gt;
+        DataPoint(dataPoint.map.filterKeys { it != attribute }, dataPoint.result)
+    })
+}</code></pre>
+<p>In this case the attribute which has the highest Information Gain is the Outlook attribute.  Since Outlook has three values we will create three subtrees: one for Sunny, one for Overcast and one for Rain.  The Sunny Subtree should filter out all data points whose Overcast attribute value is not Sunny.  In this case this subtree will have 5 data points; 2 positive examples and 3 negative examples \([2+,3-]\):</p>
+<table>
+<thead>
+<tr>
+<th>Outlook</th>
+<th>Temperature</th>
+<th>Humidity</th>
+<th>Wind</th>
+<th>Play Tennis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Weak</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Strong</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<p>Finally we will call the build function recursively on this DataSet subset.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> children = filteredRemaining.map { Pair(it.first.toString(), build(it.second)) }.toMap();
+<span class="hljs-keyword">return</span> Tree.Node(attribute, children)</code></pre>
+<p>Note that <code>it.first</code> will contain the attribute value (e.g. Sunny) whilst the it.second contains the DataSet subset.</p>
+<h1>Conclusion</h1>
+<p>In this post we have looked at some of Kotlin&#x27;s key features and we have used these to build an ID3 decision tree.  If you are further interested in learning about Kotlin I&#x27;d suggest you have a look at the <a href="https://kotlinlang.org/docs/reference/">reference guide</a>.  If you are interested in learn more about Decision Tree Learning consider buying the book linked above.  It is an absolute classic! Stay safe and keep hacking!</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>
